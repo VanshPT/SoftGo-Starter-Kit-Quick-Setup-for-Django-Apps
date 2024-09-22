@@ -1,7 +1,8 @@
 from django.urls import path,include
 from django.shortcuts import render
+from . import views
 
 urlpatterns = [
-    # path('authentication/', include('authentication.urls')),
+    path('', views.landing, name="landing"),
     
 ]

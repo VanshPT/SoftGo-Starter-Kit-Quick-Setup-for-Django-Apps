@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Intellipaper</title>
+    <!-- Include your compiled Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link href="{% static "home/landing.css" %}" rel="stylesheet"/>
+  </head>
+  <body class="bg-gray-1000 text-gray-900">
+    <div class="bg-white">
+      <header class="absolute inset-x-0 top-0 z-50">
+        {% include 'home/landing/navbar.html' %}
+        <!-- Mobile menu, show/hide based on menu open state. -->
+        <div class="lg:hidden" role="dialog" aria-modal="true">
+          <!-- Background backdrop, show/hide based on slide-over state. -->
+          <div class="fixed inset-0 z-50"></div>
+          <div
+            class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+          >
+            <div class="flex items-center justify-between">
+              <a href="#" class="-m-1.5 p-1.5">
+                <span class="sr-only">IntelliPaper</span>
+                <img
+                  class="h-8 w-auto"
+                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                  alt=""
+                />
+              </a>
+              <button
+                type="button"
+                class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              >
+                <span class="sr-only">Close menu</span>
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="mt-6 flow-root">
+              <div class="-my-6 divide-y divide-gray-500/10">
+                <div class="space-y-2 py-6">
+                  <a
+                    href="#product"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Product</a
+                  >
+                  <a
+                    href="#features"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Features</a
+                  >
+                 
+                  <a
+                    href="#aboutus"
+                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Company</a
+                  >
+                </div>
+                <div class="py-6">
+                  <a
+                    href="#"
+                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                    >Log in</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="relative isolate px-6 pt-14 lg:px-8">
+        <div
+          class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+          aria-hidden="true"
+        >
+          <div
+            class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+        <div class="margg-custom-first flex-custom">
+          <div>
+            <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                <div
+                  class="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
+                >
+                Optimize Your Projects and Cloud Costs in One Place
+                  <!--<a href="#" class="font-semibold text-custom"
+                    ><span class="absolute inset-0" aria-hidden="true"></span>Read
+                    more <span aria-hidden="true">&rarr;</span></a
+                  >-->
+                </div>
+              </div>
+              <div class="text-center">
+                <h1
+                  class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+                >
+                Empower Your Projects with Intelligent Cost Optimization and Business Insights
+                </h1>
+                <p class="mt-6 text-lg leading-8 text-gray-600">
+                  Our project management tool combines robust task tracking and collaboration features with real-time cloud cost optimization. 
+                  Manage your projects efficiently while keeping a close eye on cloud expenditures, receive proactive budget alerts, and get actionable recommendations to save costs all from a single dashboard. 
+                  Simplify your workflow and maximize your cloud investments with our integrated solution.
+                </p>
+                <div class="mt-10 flex items-center justify-center gap-x-6">
+                  <a href="/authapp/company-registration"
+                class="rounded-md bg-orange px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                Get started
+              </a>
+
+
+                  <a href="/authapp/login" class="text-sm font-semibold leading-6 text-gray-900"
+                    >Already a User? <span aria-hidden="true">→</span></a
+                  >
+                </div>
+              </div>
+            </div>
+              <div>
+                <img class="product_image_1" src="{% static 'product_image_1.png' %}" alt="product_image_1">
+              </div>
+        </div>
+        <div
+          class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+          aria-hidden="true"
+        >
+          <div
+            class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style="
+              clip-path: polygon(
+                74.1% 44.1%,
+                100% 61.6%,
+                97.5% 26.9%,
+                85.5% 0.1%,
+                80.7% 2%,
+                72.5% 32.5%,
+                60.2% 62.4%,
+                52.4% 68.1%,
+                47.5% 58.3%,
+                45.2% 34.5%,
+                27.5% 76.7%,
+                0.1% 64.9%,
+                17.9% 100%,
+                27.6% 76.8%,
+                76.1% 97.7%,
+                74.1% 44.1%
+              );
+            "
+          ></div>
+        </div>
+      </div>
+    </div>
+    <section id="product">
+      <div class="overflow-hidden py-12  dark-mode-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 dark-mode-bg">
+            <div class="flex flex-col lg:flex-row lg:items-center custom-product ">
+              <div class="mt-10 lg:mt-0 lg:w-1/2 lg:pl-8">
+                <img class="product_image_2" src="{% static 'product_image_1.png' %}" alt="product_image_1">
+            </div>
+                <div class="lg:w-1/2">
+                    <div class="max-w-lg mx-auto">
+                        <h2 class="text-3xl font-bold text-white">Our Product</h2>
+                        <p class="mt-4 text-lg text-white">Streamline project management with integrated cloud cost optimization and insightful business intelligence.
+                           Manage tasks efficiently, receive real-time cost alerts, and leverage data-driven insights for informed decision-making</p>
+                        <dl class="mt-6 space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-6 w-6 text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M5.5 17a4.5 4.5 0 01-1.44-8.765 4.5 4.5 0 018.302-3.046 3.5 3.5 0 014.504 4.272A4 4 0 0115 17H5.5zm3.75-2.75a.75.75 0 001.5 0V9.66l1.95 2.1a.75.75 0 101.1-1.02l-3.25-3.5a.75.75 0 00-1.1 0l-3.25 3.5a.75.75 0 101.1 1.02l1.95-2.1v4.59z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="ml-3 text-white">
+                                    <dt class="text-lg font-medium leading-6 text-white">Task Management:</dt>
+                                    <dd class="mt-2 text-base leading-6">Efficiently track and collaborate on tasks and projects.</dd>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-6 w-6 text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="ml-3 text-white">
+                                    <dt class="text-lg font-medium leading-6 text-white">Business Intelligence Insights:</dt>
+                                    <dd class="mt-2 text-base leading-6">Gain actionable insights to enhance decision-making and project outcomes.</dd>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0">
+                                    <svg class="h-6 w-6 text-orange" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                        <path d="M4.632 3.533A2 2 0 016.577 2h6.846a2 2 0 011.945 1.533l1.976 8.234A3.489 3.489 0 0016 11.5H4c-.476 0-.93.095-1.344.267l1.976-8.234z" />
+                                        <path fill-rule="evenodd" d="M4 13a2 2 0 100 4h12a2 2 0 100-4H4zm11.24 2a.75.75 0 01.75-.75H16a.75.75 0 01.75.75v.01a.75.75 0 01-.75.75h-.01a.75.75 0 01-.75-.75V15zm-2.25-.75a.75.75 0 00-.75.75v.01c0 .414.336.75.75.75H13a.75.75 0 00.75-.75V15a.75.75 0 00-.75-.75h-.01z" clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div class="ml-3 text-white">
+                                    <dt class="text-lg font-medium leading-6 text-white">Cloud Cost Management:</dt>
+                                    <dd class="mt-2 text-base leading-6">Monitor and optimize cloud expenditures with proactive management tools.</dd>
+                                </div>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+                
+              
+            </div>
+        </div>
+    </div>
+    
+    </section>
+
+    <section id="features" class="bg-white py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-4xl lg:text-center">
+              <!--<h2 class="text-base font-semibold leading-7 text-orange">Deploy faster</h2> -->
+              <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Everything you need to know about our features</p>
+              <p class="mt-6 text-lg leading-8 text-gray-600">Explore how our integrated platform enhances project management</p>
+          </div>
+          <div class="mx-auto mt-16 max-w-4xl sm:mt-24 lg:mt-24 lg:max-w-4xl">
+             
+
+              <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl margg-l-2">
+                <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-2 lg:gap-y-16">
+                    <dl class="relative pl-16 ">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg back-orange">
+                                <svg class="h-6 w-6 text-white back-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
+                                </svg>
+                            </div>
+                            Task Management:
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Streamline task tracking and collaboration.</dd>
+                    </dl>
+                    <dl class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg back-orange">
+                                <svg class="h-6 w-6 text-white back-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
+                                </svg>
+                            </div>
+                            Cloud Cost Management: 
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Optimize expenses with real-time monitoring.</dd>
+                    </dl>
+                    <dl class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg back-orange">
+                                <svg class="h-6 w-6 text-white back-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+                                </svg>
+                            </div>
+                            Business Intelligence Insights:
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Make informed decisions with actionable analytics</dd>
+                    </dl>
+                    <dl class="relative pl-16">
+                        <dt class="text-base font-semibold leading-7 text-gray-900">
+                            <div class="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg back-orange">
+                                <svg class="h-6 w-6 text-white back-orange" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" />
+                                </svg>
+                            </div>
+                            Custom Dashboards: 
+                        </dt>
+                        <dd class="mt-2 text-base leading-7 text-gray-600">Tailor views for personalized project and cost visibility.</dd>
+                    </dl>
+                </div>
+
+
+          </div>
+      </div>
+  </section>
+  
+  <section id="aboutus" class="relative overflow-hidden py-24 sm:py-32 aboutus-bg">
+    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl lg:mx-0">
+        <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">About Us</h2>
+        <p class="mt-6 text-lg leading-8 text-gray-300">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+      </div>
+      <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
+        <div class="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+          <div class="lg:pr-8 lg:pt-4">
+            <div class="lg:max-w-lg">
+              <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Open roles</p>
+              <p class="mt-6 text-lg leading-8 text-gray-300">Consequat posuere massa malesuada nunc facilisis venenatis commodo ultrices varius malesuada malesuada metus.</p>
+            </div>
+          </div>
+          <div class="lg:pr-8 lg:pt-4">
+            <div class="lg:max-w-lg">
+              <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Internship program</p>
+              <p class="mt-6 text-lg leading-8 text-gray-300">Consequat posuere massa malesuada nunc facilisis venenatis commodo ultrices varius malesuada malesuada metus.</p>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-2">
+          <div class="lg:pr-8 lg:pt-4">
+            <div class="lg:max-w-lg">
+              <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Our values</p>
+              <p class="mt-6 text-lg leading-8 text-gray-300">Consequat posuere massa malesuada nunc facilisis venenatis commodo ultrices varius malesuada malesuada metus.</p>
+            </div>
+          </div>
+          <div class="lg:pr-8 lg:pt-4">
+            <div class="lg:max-w-lg">
+              <p class="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">Meet our leadership</p>
+              <p class="mt-6 text-lg leading-8 text-gray-300">Consequat posuere massa malesuada nunc facilisis venenatis commodo ultrices varius malesuada malesuada metus.</p>
+            </div>
+          </div>
+        </div>
+        <dl class="mt-10 grid grid-cols-1 gap-x-8 gap-y-16 text-center sm:grid-cols-4">
+          <div class="flex flex-col">
+            <dt class="text-lg font-medium leading-6 text-gray-300">Offices worldwide</dt>
+            <dd class="mt-2 text-3xl font-bold tracking-tight text-white">12</dd>
+          </div>
+          <div class="flex flex-col">
+            <dt class="text-lg font-medium leading-6 text-gray-300">Full-time colleagues</dt>
+            <dd class="mt-2 text-3xl font-bold tracking-tight text-white">300+</dd>
+          </div>
+          <div class="flex flex-col">
+            <dt class="text-lg font-medium leading-6 text-gray-300">Hours per week</dt>
+            <dd class="mt-2 text-3xl font-bold tracking-tight text-white">40</dd>
+          </div>
+          <div class="flex flex-col">
+            <dt class="text-lg font-medium leading-6 text-gray-300">Paid time off</dt>
+            <dd class="mt-2 text-3xl font-bold tracking-tight text-white">Unlimited</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://flowbite.com/" class="hover:underline">IntelliPaper™</a>. All Rights Reserved.
+      </span>
+      <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+          <li>
+              <a href="#aboutus" class="hover:underline me-4 md:me-6">About</a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline me-4 md:me-6">Licensing</a>
+          </li>
+          <li>
+              <a href="#" class="hover:underline">Contact</a>
+          </li>
+      </ul>
+  </div>
+</footer>
+<script src="{% static "home/landing.js" %}"></script>
+  </body>
+</html>

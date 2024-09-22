@@ -1,0 +1,355 @@
+.custom-list-item {
+    margin-left: 2.5rem;
+  }
+
+  .custom-dt {
+    color: #202938; 
+    font-weight: 600; /* Tailwind's font-semibold */
+  }
+
+  .custom-dd {
+    color: #4b5563; /* Tailwind's text-gray-600 */
+  }
+  /* Custom CSS to replicate Tailwind styles */
+.relative {
+position: relative;
+}
+
+.flex {
+display: flex;
+align-items: center;
+}
+
+.custom-svg {
+height: 2rem; /* Adjust the height as needed */
+width: 2rem; /* Adjust the width as needed */
+margin-right: 1rem; /* Adjust the margin as needed */
+}
+/* Custom CSS to refine section appearance */
+@media (min-width: 1024px) {
+.lg\:flex-row-reverse {
+    flex-direction: row-reverse !important;
+}
+.lg\:pl-8 {
+    padding-left: 2rem !important; /* Adjust as needed */
+}
+}
+
+/* Container styling */
+.overflow-hidden {
+overflow: hidden;
+}
+
+.py-12 {
+padding-top: 3rem;
+padding-bottom: 3rem;
+}
+
+.bg-gradient-to-b {
+background-image: linear-gradient(to bottom, #ffffff, #f9fafb);
+}
+
+/* Max width container */
+.max-w-7xl {
+max-width: 80rem;
+margin-left: auto;
+margin-right: auto;
+}
+
+/* Inner container */
+.px-4 {
+padding-left: 1rem;
+padding-right: 1rem;
+}
+
+.sm\:px-6 {
+@media (min-width: 640px) {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+}
+
+.lg\:px-8 {
+@media (min-width: 1024px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+}
+
+/* Flex container */
+.flex {
+display: flex;
+}
+
+.flex-col-reverse {
+flex-direction: column-reverse;
+}
+
+.lg\:flex-row {
+@media (min-width: 1024px) {
+    flex-direction: row;
+}
+}
+
+.lg\:items-center {
+@media (min-width: 1024px) {
+    align-items: center;
+}
+}
+
+/* Product section */
+.custom-product {
+margin-top: 2rem;
+}
+
+/* Left column */
+.lg\:w-1\/2 {
+@media (min-width: 1024px) {
+    width: 50%;
+}
+}
+
+.max-w-lg {
+max-width: 42rem;
+margin-right: 1rem;
+}
+
+.text-3xl {
+font-size: 1.875rem;
+}
+
+.font-semibold {
+font-weight: 600;
+}
+
+.text-gray-900 {
+color: #4a5568;
+}
+
+.mt-4 {
+margin-top: 1rem;
+}
+
+.text-lg {
+font-size: 1.125rem;
+}
+
+/* Description list */
+.space-y-4 > * + * {
+margin-top: 1rem;
+}
+
+/* Right column */
+.mt-10 {
+margin-top: 2.5rem;
+}
+
+.lg\:pl-8 {
+@media (min-width: 1024px) {
+    padding-left: 2rem;
+}
+}
+
+.w-full {
+width: 100%;
+}
+
+.rounded-lg {
+border-radius: 0.5rem;
+}
+
+.shadow-lg {
+box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+.wider-img {
+width: 100%; /* Adjust the width as needed */
+max-width: 700px; /* Maximum width for the image */
+}
+
+/* Adjust the margins to push the content to the right */
+.lg\:pl-8 {
+@media (min-width: 1024px) {
+    padding-left: 4rem; /* Increase the padding to push content to the right */
+}
+}
+/* Image */
+img {
+margin-left:1rem;
+display: block;
+max-width: 100%;
+height: auto;
+}
+#product{
+background-color: #1a202c; /* Dark greyish blue color */
+color: white; /* Text color for better readability */
+padding: 3rem 0;
+}
+.dark-mode-bg {
+background-color: #1a202c; /* Dark greyish blue color */
+color: white!important; /* Text color for better readability */
+padding: 3rem 0; /* Add padding to the section */
+}
+#features {
+color: #fff;
+padding-top: 6rem;
+padding-bottom: 6rem;
+}
+
+#features h2 {
+color: rgb(0, 0, 255);
+}
+
+#features .bg-indigo-600 {
+background-color: rgb(0, 0, 255);
+}
+
+#features .text-indigo-600 {
+color: rgb(0, 0, 255);
+}
+
+.flex-custom {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+gap: 2rem; /* Adjust the gap between the dl elements */
+}
+
+.margg-l-2 {
+margin-left: 2rem;
+}
+
+/* Adjust the gap between dl elements */
+.flex-custom dl {
+margin-bottom: 2rem; /* Increase vertical gap between dl elements */
+}
+
+/* Adjust spacing within dl elements */
+.flex-custom dt, .flex-custom dd {
+margin-bottom: 1rem;
+}
+.bg-custom{
+background-color: rgb(0, 0, 255);
+}
+.text-custom{
+color: rgb(0, 0, 255);
+}
+
+    .main-logo-design {
+    font-size: 1.8rem;
+    color: #202938;
+    font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  }
+  .add-class-logo-40{
+    font-size: 1.8rem;
+    color: #ff7f50;
+    font-family: "Kanit", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  }
+  .aboutus-bg {
+    background: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply') no-repeat center center/cover;
+    background-color: #1a202c;
+  }
+  /* Custom CSS for Footer */
+  footer {
+      background-color: #ffffff; /* White background */
+      border-radius: 0.5rem; /* Rounded corners */
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Shadow */
+      margin: 1rem; /* Margin */
+      padding: 1rem; /* Padding */
+  }
+
+  footer a {
+      color: #4a5568; /* Gray text color */
+      text-decoration: none; /* Remove underline */
+      transition: color 0.3s ease; /* Smooth transition */
+  }
+
+  footer a:hover {
+      color: #2d3748; /* Darker text color on hover */
+  }
+
+  footer ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0.75rem; /* Spacing above list */
+      padding: 0; /* Remove default padding */
+      list-style: none; /* Remove bullet points */
+  }
+
+  footer ul li {
+      margin-right: 1.5rem; /* Spacing between list items */
+  }
+
+  footer ul li:last-child {
+      margin-right: 0; /* No margin on the last item */
+  }
+.flex-custom{
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+align-items:center;
+}
+.margg-custom-first{
+margin:10rem 10rem;
+
+}
+.rounded-md {
+border-radius: 0.375rem; /* 6px rounded corners */
+}
+.bg-orange {
+background-color: #ff7f50; /* Orange color */
+}
+.text-white {
+color: #ffffff; /* White text */
+}
+.hover\:bg-orange-300:hover {
+background-color: #ffa07a; /* Lighter shade of orange on hover */
+}
+.focus-visible\:outline {
+outline: 2px solid transparent;
+outline-offset: 2px;
+}
+.focus-visible\:outline-2:focus {
+outline: 2px solid #4f46e5; /* Indigo 600 outline on focus */
+}
+.product_image_1{
+border-radius:8px;
+margin-right:5rem;
+}
+.text-orange{
+color:#ff7f50;
+}
+.back-orange{
+background-color:#ff7f50;
+}
+.product_image_2{
+width:90%;
+border-radius:8px;
+}
+/* Default navbar style (without .nav-applied-10) */
+nav {
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  /* Navbar style after scrolling 10px */
+  .nav-applied-40 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #202938;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* White text inside the navbar after scrolling */
+  .nav-applied-40 a {
+    color: white;
+  }
+  
