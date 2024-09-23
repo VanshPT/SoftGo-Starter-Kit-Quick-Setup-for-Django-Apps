@@ -51,3 +51,8 @@ const links = document.querySelectorAll('nav a[href^="#"]');
                 });
             });
         });
+
+// js to handle responsiveness of landing pages hamburger icon 
+document.getElementById('hamburger-btn').addEventListener('click', function () {
+  document.getElementById('mobile-menu').classList.toggle('menu-open');
+});
