@@ -2,7 +2,6 @@
 # 🌟 **SoftGo - Starter Kit built on Django Framework** 🌟  
 *Kickstart your software or project development with prebuilt authentication and dashboard features!*  
 
-
 ### 🚀 **What is SoftGo?**  
 SoftGo (Software + Django) is your go-to Django starter kit, designed to help developers—quickly set up the foundational elements of a project or software. With all essential features like login, signup, dynamic user dashboards, and remember-me functionality, you can skip the repetitive tasks and focus directly on building your actual use case. SoftGo takes care of the groundwork, allowing you to move fast and build smarter!
 
@@ -12,6 +11,9 @@ SoftGo (Software + Django) is your go-to Django starter kit, designed to help de
 - ⏳ **Persistent Login**: Users who click "Remember Me" stay logged in for **two weeks**, skipping the login process unless they manually log out.
 - 📱 **Responsive Design**: Every page, including the login, registration, and dashboard pages, is fully responsive! 💻 📱
 - 🚪 **Logout and Session Handling**: Easy user session management with built-in Django tools.
+
+⚠️ **Note for Production**:  
+If you're using **SoftGo** in production, **do not use the Tailwind CDN** (currently used for development). Instead, switch to the **Django-Tailwind package**. You can find the documentation [here](https://django-tailwind.readthedocs.io/en/latest/).
 
 ### 🔥 **How to Get Started?**  
 Setting up SoftGo is a breeze! Follow these steps:  
@@ -56,7 +58,6 @@ Some planned updates include:
 - 🛠️ Customizable themes for the dashboard
 - 🌐 Improved landing page responsiveness (open for contributions)
 
-
 ## 🌟 Open Source Contributions Welcome!
 
 We strongly believe in the power of community and open source collaboration. That's why we invite **you** to contribute to **SoftGo**! Whether it's improving the landing page's responsiveness, adding new features, fixing bugs, or suggesting ideas, your contributions are highly valued and will not only help improve **SoftGo**, but also **boost your tech profile**. Contributing to open source is a great way to gain experience, learn new skills, and showcase your work to potential employers.
@@ -75,5 +76,3 @@ SoftGo is licensed under the MIT License. See the [LICENSE](LICENSE) file for mo
 
 ### 👤 **Author**  
 *Written by Vansh Thakkar*  
-
----
