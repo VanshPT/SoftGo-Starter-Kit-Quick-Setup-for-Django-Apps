@@ -180,12 +180,12 @@ max-width: 100%;
 height: auto;
 }
 #product{
-background-color: #1a202c; /* Dark greyish blue color */
+background-color: rgb(17 24 39); /* Dark greyish blue color */
 color: white; /* Text color for better readability */
 padding: 3rem 0;
 }
 .dark-mode-bg {
-background-color: #1a202c; /* Dark greyish blue color */
+background-color: rgb(17 24 39); /* Dark greyish blue color */
 color: white!important; /* Text color for better readability */
 padding: 3rem 0; /* Add padding to the section */
 }
@@ -317,10 +317,12 @@ outline-offset: 2px;
 .focus-visible\:outline-2:focus {
 outline: 2px solid #4f46e5; /* Indigo 600 outline on focus */
 }
-.product_image_1{
+.product_image_1_no_anim{
 border-radius:8px;
 margin-right:5rem;
+width: 1000px;
 }
+
 .text-orange{
 color:#ff7f50;
 }

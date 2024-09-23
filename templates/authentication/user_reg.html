@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0f172a; /* Dark background */
+            color: #ffffff; /* White text */
+        }
+        .register-card {
+            background-color: #1e293b; /* Slightly lighter for contrast */
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        .orange-button {
+            background-color: #ff7f50; /* Coral color for buttons */
+            color: #fff;
+        }
+        .orange-button:hover {
+            background-color: #ff6347; /* Lighter shade on hover */
+        }
+        .login-img {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+        }
+        @media (max-width: 768px) {
+            .register-card {
+                width: 90%; /* Wider for smaller screens */
+            }
+        }
+        @media (max-width: 649px) {
+            .register-card {
+                width: 100%; /* Full width on smaller screens */
+                margin: 0 auto; /* Center the card */
+            }
+            .login-img {
+                display: none; /* Remove the image */
+            }
+        }
+    </style>
+</head>
+<body class="flex h-screen flex-col md:flex-row">
+
+    <!-- Registration Form -->
+    <div class="flex items-center justify-center w-full">
+        <div class="register-card p-8 w-full max-w-sm">
+            <h2 class="text-3xl font-bold mb-6 text-center">Register</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="first_name" class="block mb-2">First Name</label>
+                    <input type="text" id="first_name" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="last_name" class="block mb-2">Last Name</label>
+                    <input type="text" id="last_name" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="username" class="block mb-2">Username</label>
+                    <input type="text" id="username" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
+                </div>
+                <div class="mb-6 relative">
+                    <label for="password" class="block mb-2">Password</label>
+                    <input type="password" id="password" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
+                    <span class="absolute inset-y-0 right-0 flex items-center pr-2 cursor-pointer" onclick="togglePassword()">
+                        <svg id="eye" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.97 10.97 0 0112 19c-5.523 0-10-4.477-10-10 0-1.125.178-2.206.493-3.226M15.36 12.568A3.375 3.375 0 0012 10.125c-.307 0-.598.03-.875.087M9.75 12a3.375 3.375 0 003.75 3.375m3.615-3.615A10.977 10.977 0 0012 4.125c-5.523 0-10 4.477-10 10a10.977 10.977 0 001.2 4.773m13.05 3.07A10.977 10.977 0 0012 19.875c5.523 0 10-4.477 10-10 0-1.125-.178-2.206-.493-3.226" />
+                        </svg>
+                    </span>
+                </div>
+                <div class="mb-6 relative">
+                    <label for="confirm_password" class="block mb-2">Confirm Password</label>
+                    <input type="password" id="confirm_password" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
+                    <span class="absolute inset-y-0 right-0 flex items-center pr-2 cursor-pointer" onclick="toggleConfirmPassword()">
+                        <svg id="eye_confirm" class="h-5 w-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.97 10.97 0 0112 19c-5.523 0-10-4.477-10-10 0-1.125.178-2.206.493-3.226M15.36 12.568A3.375 3.375 0 0012 10.125c-.307 0-.598.03-.875.087M9.75 12a3.375 3.375 0 003.75 3.375m3.615-3.615A10.977 10.977 0 0012 4.125c-5.523 0-10 4.477-10 10a10.977 10.977 0 001.2 4.773m13.05 3.07A10.977 10.977 0 0012 19.875c5.523 0 10-4.477 10-10 0-1.125-.178-2.206-.493-3.226" />
+                        </svg>
+                    </span>
+                </div>
+                <button type="submit" class="w-full py-2 rounded orange-button">Register</button>
+            </form>
+            <p class="mt-4 text-center text-sm">Already have an account? <a href="/authentication/login" class="text-orange-500">Log in</a></p>
+        </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="w-full md:w-1/2 flex items-center justify-center">
+        <img src="{% static 'authentication/images/register_img.png' %}" alt="Registration Image" class="login-img">
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById("password");
+            const eyeIcon = document.getElementById("eye");
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                eyeIcon.classList.add("text-orange-500");
+            } else {
+                passwordInput.type = "password";
+                eyeIcon.classList.remove("text-orange-500");
+            }
+        }
+
+        function toggleConfirmPassword() {
+            const confirmPasswordInput = document.getElementById("confirm_password");
+            const eyeConfirmIcon = document.getElementById("eye_confirm");
+            if (confirmPasswordInput.type === "password") {
+                confirmPasswordInput.type = "text";
+                eyeConfirmIcon.classList.add("text-orange-500");
+            } else {
+                confirmPasswordInput.type = "password";
+                eyeConfirmIcon.classList.remove("text-orange-500");
+            }
+        }
+    </script>
+
+</body>
+</html>

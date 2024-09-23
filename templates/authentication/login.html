@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-color: #0f172a; 
+            color: #ffffff;
+        }
+        .login-card {
+            background-color: #1e293b; 
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+        .orange-button {
+            background-color: #ff7f50; 
+            color: #fff;
+        }
+        .orange-button:hover {
+            background-color: #ff6347; 
+        }
+        .login-img {
+            max-width: 70%; 
+            height: auto; 
+        }
+        @media (max-width: 768px) {
+            .login-card {
+                width: 90%;
+            }
+        }
+        @media (max-width: 649px) {
+            .login-card {
+                margin-top:1rem;
+                width: 100%; 
+                margin: 0 auto; 
+            }
+            .login-img {
+                display: none; 
+            }
+            .margg-1{
+                margin-top:3rem;
+            }
+        }
+    </style>
+</head>
+<body class="flex h-screen flex-col md:flex-row">
+
+    <!-- Login Form -->
+    <div class="flex items-center justify-center w-full margg-1">
+        <div class="login-card p-8 w-full max-w-sm">
+            <h2 class="text-3xl font-bold mb-6 text-center">Login</h2>
+            <form>
+                <div class="mb-4">
+                    <label for="username" class="block mb-2">User ID</label>
+                    <input type="text" id="username" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
+                </div>
+                <div class="mb-6">
+                    <label for="password" class="block mb-2">Password</label>
+                    <input type="password" id="password" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
+                </div>
+                <button type="submit" class="w-full py-2 rounded orange-button">Log In</button>
+            </form>
+            <p class="mt-4 text-center text-sm">Don't have an account? <a href="/authentication/register" class="text-orange-500">Sign up</a></p>
+        </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="w-full md:w-1/2 flex items-center justify-center">
+        <img src="{% static 'authentication/images/login_img.png' %}" alt="Login Image" class="login-img">
+    </div>
+
+</body>
+</html>
