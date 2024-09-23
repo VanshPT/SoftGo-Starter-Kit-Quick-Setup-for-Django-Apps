@@ -18,6 +18,16 @@
 <link href="{% static "home/landing.css" %}" rel="stylesheet"/>
   </head>
   <body class="bg-gray-1000 text-gray-900">
+    {% include 'partials/message_popup.html' %}
+    {% if messages %}
+    <script>
+        // Display each message passed from Django views
+        {% for message in messages %}
+            showMessage("{{ message }}");
+        {% endfor %}
+    </script>
+{% endif %}
+
     <div class="bg-white">
       <header class="absolute inset-x-0 top-0 z-50">
         {% include 'home/landing/navbar.html' %}

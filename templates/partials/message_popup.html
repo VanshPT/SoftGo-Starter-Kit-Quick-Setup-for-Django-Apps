@@ -1,0 +1,56 @@
+<style>
+    /* Dark theme, popup styled according to the existing theme */
+    #message-popup {
+        background-color: #1e293b; /* Slightly lighter dark background */
+        color: #fff; /* White text */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Shadow effect */
+        z-index: 9999; /* Ensure it's always above other elements */
+    }
+    #message-popup.show {
+        opacity: 1; /* Visible when the 'show' class is added */
+        pointer-events: auto; /* Enable interactions */
+    }
+    #message-popup.hide {
+        opacity: 0; /* Fade out effect */
+        pointer-events: none; /* Disable interactions when hidden */
+    }
+    /* Cross icon hover effect */
+    #close-message:hover svg {
+        stroke: #ff7f50; /* Coral color on hover */
+    }
+</style>
+<!-- Include this file in your base template just after the body tag -->
+<div id="message-popup" class="fixed top-5 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white shadow-lg rounded-lg px-6 py-3 flex items-center justify-between w-full max-w-xl z-50 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out">
+    <span id="message-text" class="text-sm font-semibold"></span>
+    <button id="close-message" class="ml-4 text-gray-400 hover:text-gray-200 focus:outline-none">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+</div>
+<script>
+    // Function to display the message popup
+    function showMessage(message) {
+        const popup = document.getElementById('message-popup');
+        const messageText = document.getElementById('message-text');
+
+        messageText.innerText = message; // Set message text
+        popup.classList.remove('hide'); // Remove hide class
+        popup.classList.add('show'); // Show popup
+
+        // Auto-hide the message after 5 seconds
+        setTimeout(() => {
+            hideMessage();
+        }, 5000);
+    }
+
+    // Function to hide the message popup
+    function hideMessage() {
+        const popup = document.getElementById('message-popup');
+        popup.classList.remove('show');
+        popup.classList.add('hide');
+    }
+
+    // Close popup when clicking the cross button
+    document.getElementById('close-message').addEventListener('click', hideMessage);
+</script>

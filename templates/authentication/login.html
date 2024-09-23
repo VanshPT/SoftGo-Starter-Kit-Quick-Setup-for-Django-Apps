@@ -35,33 +35,56 @@
         }
         @media (max-width: 649px) {
             .login-card {
-                margin-top:1rem;
+                margin-top: 1rem;
                 width: 100%; 
                 margin: 0 auto; 
             }
             .login-img {
                 display: none; 
             }
-            .margg-1{
-                margin-top:3rem;
+            .margg-1 {
+                margin-top: 3rem;
             }
+        }
+        .form-checkbox {
+            accent-color: #ff7f50;
+        }
+        .form-label {
+            color: #ffffff;
         }
     </style>
 </head>
 <body class="flex h-screen flex-col md:flex-row">
+    {% include 'partials/message_popup.html' %}
+    {% if messages %}
+    <script>
+        // Display each message passed from Django views
+        {% for message in messages %}
+            showMessage("{{ message }}");
+        {% endfor %}
+    </script>
+    {% endif %}
 
     <!-- Login Form -->
     <div class="flex items-center justify-center w-full margg-1">
         <div class="login-card p-8 w-full max-w-sm">
             <h2 class="text-3xl font-bold mb-6 text-center">Login</h2>
-            <form>
+            <form action='/authentication/login_user/' method="post">
+                {% csrf_token %}
                 <div class="mb-4">
                     <label for="username" class="block mb-2">User ID</label>
-                    <input type="text" id="username" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
+                    <input type="text" id="username" name="username" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
                 </div>
                 <div class="mb-6">
                     <label for="password" class="block mb-2">Password</label>
-                    <input type="password" id="password" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
+                    <input type="password" id="password" name="password" class="w-full p-2 rounded border border-gray-600 bg-gray-800 focus:outline-none focus:border-orange-500" required>
+                </div>
+                <!-- Remember Me Checkbox -->
+                <div class="mb-6">
+                    <label class="inline-flex items-center">
+                        <input type="checkbox" id="remember_me" name="remember_me" class="form-checkbox text-orange-500">
+                        <span class="ml-2">Remember Me</span>
+                    </label>
                 </div>
                 <button type="submit" class="w-full py-2 rounded orange-button">Log In</button>
             </form>
