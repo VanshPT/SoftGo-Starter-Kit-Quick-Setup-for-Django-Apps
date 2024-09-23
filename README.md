@@ -56,7 +56,6 @@ Some planned updates include:
 - 🛠️ Customizable themes for the dashboard
 - 🌐 Improved landing page responsiveness (open for contributions)
 
----
 
 ## 🌟 Open Source Contributions Welcome!
 
