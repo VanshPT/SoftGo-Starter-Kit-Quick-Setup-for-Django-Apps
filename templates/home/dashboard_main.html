@@ -1,3 +1,11 @@
+{% extends 'home/dashboard.html' %}
+{% block upload %}text-gray-100 bg-gray-700 bg-opacity-25{% endblock %}
+{% block auto_clustering %}text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100 {% endblock %}
+{% block explore_topics %}text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100{% endblock %}
+{% block search_papers %}text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100{% endblock %}
+{% block history %}text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100{% endblock %}
+{% block body %}
+{% comment %} edit below content to make a new page, keep rest contents same, to make the second ex- auto clustering link active, add the text-gray-100... classes of upload to auto clustering and add text-gray-500... classes to rest link blocks  {% endcomment %}
 <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
     <div class="container px-6 py-8 mx-auto">
         <h3 class="text-3xl font-medium text-gray-700">Dashboard</h3>
@@ -405,4 +413,7 @@
             </div>
         </div>
     </div>
-</main>
+</main>.
+{% comment %} edit till here to make a new page  {% endcomment %}
+{% endblock %}
+{% block js %}{% endblock %}

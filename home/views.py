@@ -9,4 +9,4 @@ def landing(request):
 def render_dashboard(request,username):
     user=request.user
     context={'username':user.username, 'first_name':user.first_name, 'last_name':user.last_name, 'email': user.email}
-    return render(request, 'home/dashboard.html',context)
+    return render(request, 'home/dashboard_main.html',context)
