@@ -1,0 +1,88 @@
+{% extends 'home/dashboard.html' %}
+{% block title %}Auto Clustering{% endblock %}
+{% block upload %}text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100{% endblock %}
+{% block auto_clustering %}text-gray-100 bg-gray-700 bg-opacity-25 {% endblock %}
+{% block explore_topics %}text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100{% endblock %}
+{% block search_papers %}text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100{% endblock %}
+{% block history %}text-gray-500 hover:bg-gray-700 hover:bg-opacity-25 hover:text-gray-100{% endblock %}
+{% block css %}
+<style>
+    /* Remove this CSS and add your own for customization */
+    body {
+        background-color: #121212;
+        color: #e0e0e0;
+        font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+        color: #ff7f50;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .instructions {
+        background-color: #1c1c1c;
+        border: 1px solid #ff7f50;
+        border-radius: 8px;
+        padding: 30px;
+        margin-top: 20px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    h2 {
+        color: #ff7f50;
+        margin-bottom: 15px;
+    }
+
+    ol {
+        list-style-type: decimal;
+        padding-left: 20px;
+    }
+
+    li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    code {
+        background-color: #2c2c2c;
+        color: #f8f8f2;
+        padding: 4px 6px;
+        border-radius: 4px;
+    }
+</style>
+{% endblock %}
+{% block body %}
+{% comment %} edit below content to make a new page, keep rest contents same, to make the second ex- auto clustering link active, add the text-gray-100... classes of upload to auto clustering and add text-gray-500... classes to rest link blocks  {% endcomment %}
+<h1>Auto Clustering Page</h1>
+<p style="text-align: center;">Welcome to the Auto Clustering page! Here’s how you can customize this page:</p>
+
+<div class="instructions">
+    <h2>Instructions to Modify This Page</h2>
+    <ol>
+        <li><strong>Rename the URL:</strong> Change the URL pattern in <code>urls.py</code>:
+            <pre>
+path('auto_clustering/<str:username>/', views.auto_clustering, name='auto_clustering')
+            </pre>
+            to something like:
+            <pre>
+path('my_clustering/<str:username>/', views.my_clustering, name='my_clustering')
+            </pre>
+        </li>
+        <li><strong>Change the View:</strong> In <code>views.py</code>, rename the function:
+            <pre>
+def auto_clustering(request, username):
+    ...
+            </pre>
+            to:
+            <pre>
+def my_clustering(request, username):
+    ...
+            </pre>
+        </li>
+        <li><strong>Update the Template:</strong> Rename this template file from <code>auto_clustering.html</code> to <code>my_clustering.html</code> and update the <code>template_name</code> in your view accordingly.</li>
+    </ol>
+</div>
+{% comment %} edit till here to make a new page  {% endcomment %}
+{% endblock %}
+{% block js %}{% endblock %}
