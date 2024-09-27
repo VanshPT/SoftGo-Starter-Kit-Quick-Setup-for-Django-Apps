@@ -34,7 +34,11 @@
         <a href="#aboutus" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="/authentication/login" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+        {% if username %}
+            <a href="/dashboard/{{ username }}" class="text-sm font-semibold leading-6 text-gray-900">Dashboard <span aria-hidden="true">&rarr;</span></a>
+        {% else %}
+            <a href="/authentication/login" class="text-sm font-semibold leading-6 text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+        {% endif %}
     </div>
 
     <!-- Custom mobile menu -->
@@ -43,7 +47,11 @@
             <a href="#product" class="text-sm font-semibold leading-6 text-gray-900">Product</a>
             <a href="#features" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
             <a href="#aboutus" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
-            <a href="/authentication/login" class="text-sm font-semibold leading-6 text-gray-900">Log in &rarr;</a>
+            {% if username %}
+                <a href="/dashboard/{{ username }}" class="text-sm font-semibold leading-6 text-gray-900">Dashboard &rarr;</a>
+            {% else %}
+                <a href="/authentication/login" class="text-sm font-semibold leading-6 text-gray-900">Log in &rarr;</a>
+            {% endif %}
         </div>
     </div>
 </nav>

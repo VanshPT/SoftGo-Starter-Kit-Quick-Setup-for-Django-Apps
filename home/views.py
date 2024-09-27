@@ -3,7 +3,11 @@ from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def landing(request):
-    return render(request, 'home/landing/landing.html')
+    if request.user:
+        context={'username':request.user.username}
+        return render(request, 'home/landing/landing.html', context)
+    else:
+        return render(request, 'home/landing/landing.html')
 
 @login_required
 def render_dashboard(request,username):
