@@ -6,7 +6,7 @@
 SoftGo (Software + Django) is your go-to Django starter kit, designed to help developers—quickly set up the foundational elements of a project or software. With all essential features like login, signup, dynamic user dashboards, and remember-me functionality, you can skip the repetitive tasks and focus directly on building your actual use case. SoftGo takes care of the groundwork, allowing you to move fast and build smarter!
 
 ### 💡 **Why SoftGo?**  
-SoftGo is perfect for those who want to hit the ground running without having to waste time building basic authentication, dashboard management, or user sessions from scratch. If you're a student, freelancer, or developer looking for a head start in Django-based projects, **SoftGo** is built for you! 💼
+SoftGo is perfect for those who want to hit the ground running without having to waste time building basic authentication, dashboard management, or user sessions from scratch. If you're a student, hackathon participant, freelancer, or developer looking for a head start in Django-based projects, **SoftGo** is built for you! 💼
 
 ### ✨ **Key Features**  
 - 🔐 **Authentication Done Right**: Seamless user registration, login, and logout functionalities, complete with password and email validation.
