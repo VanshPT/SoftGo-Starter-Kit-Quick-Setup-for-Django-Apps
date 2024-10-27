@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_q',
     'authentication',
     'home'
 ]
@@ -142,3 +143,15 @@ MEDIA_ROOT = BASE_DIR / 'media'
 SESSION_COOKIE_AGE = 1209600
 SESSION_EXPIRE_AT_BROWSER_CLOSE = False
 SESSION_COOKIE_SECURE = True  
+
+#Django Q settings
+Q_CLUSTER = {
+    'name': 'DjangoQCluster',
+    'workers': 4,  # Adjust based on your server capacity
+    'recycle': 500,
+    'timeout': 60,
+    'retry': 120,
+    'queue_limit': 50,
+    'bulk': 10,
+    'orm': 'default',  # Use Django ORM for task persistence
+}
