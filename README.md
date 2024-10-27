@@ -3,7 +3,7 @@
 *Kickstart your software or project development with prebuilt authentication and dashboard features!*  
 
 ### 🚀 **What is SoftGo?**  
-SoftGo (Software + Django) is your go-to Django starter kit, designed to help developers—quickly set up the foundational elements of a project or software. With all essential features like login, signup, dynamic user dashboards, and remember-me functionality, you can skip the repetitive tasks and focus directly on building your actual use case. SoftGo takes care of the groundwork, allowing you to move fast and build smarter!
+SoftGo (Software + Django) is your go-to Django starter kit, designed to help developers—quickly set up the foundational elements of a project or software. With all essential features like login, signup, dynamic user dashboards, running Asynchronous functions in backend, and remember-me functionality, you can skip the repetitive tasks and focus directly on building your actual use case. SoftGo takes care of the groundwork, allowing you to move fast and build smarter!
 
 ### 💡 **Why SoftGo?**  
 SoftGo is perfect for those who want to hit the ground running without having to waste time building basic authentication, dashboard management, or user sessions from scratch. If you're a student, hackathon participant, freelancer, or developer looking for a head start in Django-based projects, **SoftGo** is built for you! 💼
@@ -14,6 +14,7 @@ SoftGo is perfect for those who want to hit the ground running without having to
 - ⏳ **Persistent Login**: Users who click "Remember Me" stay logged in for **two weeks**, skipping the login process unless they manually log out.
 - 📱 **Responsive Design**: Every page, including the login, registration, and dashboard pages, is fully responsive! 💻 📱
 - 🚪 **Logout and Session Handling**: Easy user session management with built-in Django tools.
+- ⏳ **Asynchronous task Handeling**: Using Django Q, you can now run python functions asynchrnously.
 
 ⚠️ **Note for Production**:  
 If you're using **SoftGo** in production, **do not use the Tailwind CDN** (currently used for development). Instead, switch to the **Django-Tailwind package**. You can find the documentation [here](https://django-tailwind.readthedocs.io/en/latest/).
@@ -37,7 +38,11 @@ Setting up SoftGo is a breeze! Follow these steps:
    ```bash
    python manage.py runserver
    ```
-5. **You're all set!** 🎉 Just visit `http://127.0.0.1:8000` to explore SoftGo in action!
+5. **Start Qcluster worker for enabling Asynchronous and Parallel Processing in another terminal**:
+   ```bash
+   python manage.py qcluster
+   ```
+7. **You're all set!** 🎉 Just visit `http://127.0.0.1:8000` to explore SoftGo in action!
 
 ### ⚠️ **Known Issue**  
 🚧 **Landing Page Not Fully Responsive**  
